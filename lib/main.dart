@@ -1,3 +1,4 @@
+import 'package:backdrop/backdrop.dart';
 import 'package:flutter/material.dart';
 
 void main()=>runApp(MaterialApp(
@@ -7,19 +8,22 @@ void main()=>runApp(MaterialApp(
 class Home extends StatelessWidget{
   @override
   Widget build(BuildContext context){
-    return Scaffold(
-    appBar: AppBar(
-      title: Text('AREA 51')),
-    body: Center(
-      child: Text("I'm an Alien from another world",
-      style: TextStyle(backgroundColor:Colors.yellow,
-      fontSize: 20,
-      ),),),
-    floatingActionButton: FloatingActionButton(
-      onPressed: (){},
-      child:Icon(Icons.airplanemode_on),
-    backgroundColor: Colors.redAccent,
-    ),
+    return BackdropScaffold(
+      appBar: BackdropAppBar(
+        title: Text('Backdrop'),
+      ),
+
+      backLayer: const Center(
+      child: Text('Hello')), 
+      frontLayer: const Center(
+      child: Text('Hello User')),
+    
+
+    //  FloatingActionButton: FloatingActionButton(
+    //   onPressed: (){},
+    //   child:Icon(Icons.airplanemode_on),
+    // backgroundColor: Colors.redAccent,
+    // ),
   );
   }
 }
