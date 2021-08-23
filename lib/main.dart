@@ -17,10 +17,21 @@ class Home extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
+          Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: <Widget>[
+              Text('Hey Row'),
+            ],
+          ),
+          Text('Hey'),
           Text('a widget'),
-          TextButton(
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              primary: Colors.red, // background
+              onPrimary: Colors.cyanAccent, // foreground
+            ),
             onPressed: () {},
-            child: Text('button'),
+            child: Text('Button'),
           ),
           Container(
             color: Colors.yellow,
@@ -32,7 +43,7 @@ class Home extends StatelessWidget {
           ),
           Container(
             color: Colors.cyan,
-            padding: EdgeInsets.all(30.0),
+            padding: EdgeInsets.symmetric(vertical: 30.0, horizontal: 50.0),
             child: Text('Hello'),
           ),
         ],
