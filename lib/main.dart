@@ -1,26 +1,42 @@
 import 'package:backdrop/backdrop.dart';
 import 'package:flutter/material.dart';
 
-void main() => runApp(
-      MaterialApp(
-        home: BackdropScaffold(
-          appBar: BackdropAppBar(
-            title: Text('Backdrop'),
-          ),
-          backLayer: const Center(child: Text('Hello')),
-          frontLayer: const Center(child: Text('Hello User')),
-          floatingActionButton: FloatingActionButton(
+void main() => runApp(MaterialApp(
+      home: Home(),
+    ));
+
+class Home extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Reinforce'),
+        centerTitle: true,
+        backgroundColor: Colors.red[500],
+      ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[
+          Text('a widget'),
+          TextButton(
             onPressed: () {},
-            child: Icon(Icons.airplanemode_on),
-            backgroundColor: Colors.redAccent,
+            child: Text('button'),
           ),
-        ),
+          Container(
+            color: Colors.yellow,
+            padding: EdgeInsets.all(50.0),
+            child: ElevatedButton(
+              onPressed: () {},
+              child: Text('Yes'),
+            ),
+          ),
+          Container(
+            color: Colors.cyan,
+            padding: EdgeInsets.all(30.0),
+            child: Text('Hello'),
+          ),
+        ],
       ),
     );
-
-// class Home extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return;
-//   }
-// }
+  }
+}
