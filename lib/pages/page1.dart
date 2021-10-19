@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:reinforce_flutter/page.dart';
-
-import 'button.dart';
+import 'package:reinforce_flutter/buttons/elevatedButton.dart';
+import 'package:reinforce_flutter/buttons/textButton.dart';
+import '../buttons/buttonGradient.dart';
+import 'glass.dart';
 
 class Page2 extends StatelessWidget {
   const Page2({Key? key}) : super(key: key);
@@ -32,6 +33,9 @@ class Page2 extends StatelessWidget {
               child: Text('Helo'),
             ),
             Textbutton(),
+            Click(),
+            MyStatelessWidget(),
+            Glass().box(ht: 100, wt: 300),
           ],
         ),
       ),

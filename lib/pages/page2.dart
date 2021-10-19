@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:reinforce_flutter/buttons/elevatedButton.dart';
 
-import 'button.dart';
+import '../buttons/buttonGradient.dart';
 
 class Home extends StatelessWidget {
   @override
@@ -33,10 +34,7 @@ class Home extends StatelessWidget {
           Container(
             color: Colors.yellow,
             padding: EdgeInsets.all(50.0),
-            child: ElevatedButton(
-              onPressed: () {},
-              child: Text('Yes'),
-            ),
+            child: Click(),
           ),
           Container(
             color: Colors.cyan,

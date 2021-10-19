@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:reinforce_flutter/page.dart';
+import 'package:reinforce_flutter/pages/page2.dart';
 
 class Textbutton extends StatelessWidget {
   const Textbutton({Key? key}) : super(key: key);
@@ -12,7 +12,7 @@ class Textbutton extends StatelessWidget {
         Positioned.fill(
           child: Container(
             height: 20,
-            decoration: const BoxDecoration(
+            decoration: BoxDecoration(
               gradient: LinearGradient(
                 colors: <Color>[
                   Color(0xFF0D47A1),
